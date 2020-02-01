@@ -25,6 +25,11 @@ public class TurnipSpawner : MonoBehaviour
 
     }
 
+    public void DelayTurnips(float delay)
+    {
+        turnipCooldown = Mathf.Max(turnipCooldown, delay);
+    }
+
     private void FixedUpdate()
     {
 

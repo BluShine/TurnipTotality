@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3500549098821083724}
   - component: {fileID: 3500549098821083723}
   - component: {fileID: 3500549098821083722}
+  - component: {fileID: 8721315839067373861}
   m_Layer: 0
   m_Name: Turnip
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3500549098821083721}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.768, y: 0.817, z: -44.998}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 5850521509007150045}
   m_Father: {fileID: 0}
@@ -62,6 +63,46 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &8721315839067373861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500549098821083721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2add3596bd36abc4e88da9ad4dcfb5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expirationTime: 10
+  expirationRandomness: 5
+  expirationSpeed: 0.5
+  expirationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.0289216
+      outSlope: 0.0289216
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.5708333
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -2.8301876
+      outSlope: -2.8301876
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.04583335
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  mesh: {fileID: 5428116409061315178}
 --- !u!1 &5428116409061315178
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +162,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ed260bd1b4737f04d9234642d1476d26, type: 2}
-  - {fileID: 2100000, guid: b7d62099b9117164f9daa23273f1bfe6, type: 2}
+  - {fileID: 2100000, guid: 67391c67b3dbb334d8a85aeda539ad23, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
