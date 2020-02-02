@@ -16,10 +16,13 @@ public class RabbitBounce : MonoBehaviour
     float cooldown = 0;
     Rigidbody body;
 
+    PentatonicPlayer sound;
+
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody>();
+        sound = GetComponent<PentatonicPlayer>();
     }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class RabbitBounce : MonoBehaviour
                     Vector3.Scale(jumpRandomness, new Vector3(Random.Range(-1f, 1), Random.Range(-1f, 1), Random.Range(0, 1f))),
                     ForceMode.VelocityChange);
                 body.AddRelativeTorque(0, Random.Range(-1f, 1) * jumpSpin, 0);
+                sound.PlaySound();
             } 
             else
             {

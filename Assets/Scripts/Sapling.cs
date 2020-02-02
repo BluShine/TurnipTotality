@@ -8,12 +8,14 @@ public class Sapling : MonoBehaviour
 
     Animator anim;
     public float maxSpeed = 1.5f;
+    public float soundDelay = .5f;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         anim.speed = Random.Range(1, maxSpeed);
+        GetComponent<PentatonicPlayer>().PlaySound(Random.value * soundDelay);
     }
 
     public void BecomeTree()

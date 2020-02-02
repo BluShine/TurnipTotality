@@ -532,8 +532,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd5e74c9279cec4690ee4c0a9cb0120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  treeMask:
+    serializedVersion: 2
+    m_Bits: 2048
+  avoidanceMask:
+    serializedVersion: 2
+    m_Bits: 1
+  castLength: 15
+  castRadius: 2
+  avoidDistance: 1
+  moveSpeed: 3
+  accel: 20
+  turnSpeed: 3
+  turnAccel: 100
+  aimAngleThreshold: 5
   rabbitPrefab: {fileID: 812460144450336980, guid: d23ca9b41583b3c409ffc3ae2612809c,
     type: 3}
+  spinInterval: 0.2
 --- !u!1 &1809971036941973644
 GameObject:
   m_ObjectHideFlags: 0

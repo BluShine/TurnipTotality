@@ -13,11 +13,16 @@ public class OakTree : MonoBehaviour
     public AnimationCurve expirationCurve;
     public GameObject mesh;
 
+    public GameObject stumpPrefab;
+
+    public float collisionSoundSpeed = 10;
+
     float lifeTime = 0;
     Vector3 startScale = Vector3.one;
     Rigidbody _body;
     public Rigidbody Body { get => _body; }
 
+    PentatonicPlayer sound;
 
     public OakState State { 
         get => state; 
@@ -56,6 +61,21 @@ public class OakTree : MonoBehaviour
         _body = GetComponent<Rigidbody>();
         lifeTime = expirationTime + Random.value * expirationRandomness;
         startScale = mesh.transform.localScale;
+        sound = GetComponent<PentatonicPlayer>();
+    }
+
+    public void ChopDown()
+    {
+        GameObject.Instantiate(stumpPrefab, transform.position, transform.rotation);
+        Destroy(this.gameObject);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.relativeVelocity.magnitude > collisionSoundSpeed)
+        {
+            sound.PlaySound();
+        }
     }
 
     // Update is called once per frame
