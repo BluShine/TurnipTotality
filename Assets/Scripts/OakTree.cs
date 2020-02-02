@@ -33,7 +33,7 @@ public class OakTree : MonoBehaviour
                     break;
                 case OakState.Carried:
                     _body.constraints = RigidbodyConstraints.FreezeAll;
-                    _body.isKinematic = true;
+                    //_body.isKinematic = true;
                     break;
                 case OakState.Thrown:
                     _body.constraints = RigidbodyConstraints.None;

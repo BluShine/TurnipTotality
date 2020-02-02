@@ -39,7 +39,6 @@ public class TreeCarrier : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collide");
         OakTree tree = other.GetComponentInParent<OakTree>();
         if (carried == null && tree != null && tree.State == OakTree.OakState.Planted)
         {
