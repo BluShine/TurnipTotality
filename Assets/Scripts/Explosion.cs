@@ -35,6 +35,7 @@ public class Explosion : MonoBehaviour
         }
 
         particles = GetComponent<ParticleSystem>();
+        LateTitle.lateTitle.ShowTitle();
     }
 
     // Update is called once per frame
